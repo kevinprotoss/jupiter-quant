@@ -414,10 +414,6 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 
-ng-zorro-antd/list
-
-undefined
-
 @delon/mock
 MIT
 MIT License
@@ -587,6 +583,10 @@ ng-zorro-antd/calendar
 
 ng-zorro-antd/card
 
+ng-zorro-antd/tabs
+
+undefined
+
 ng-zorro-antd/cascader
 
 ng-zorro-antd/checkbox
@@ -606,6 +606,8 @@ ng-zorro-antd/form
 ng-zorro-antd/input
 
 ng-zorro-antd/input-number
+
+ng-zorro-antd/list
 
 ng-zorro-antd/mention
 
@@ -634,8 +636,6 @@ ng-zorro-antd/slider
 ng-zorro-antd/spin
 
 ng-zorro-antd/switch
-
-ng-zorro-antd/tabs
 
 ng-zorro-antd/tag
 
