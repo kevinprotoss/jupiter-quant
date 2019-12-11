@@ -58,7 +58,7 @@ export class StartupService {
       resolve(null);
     });
   }
-  
+
   private viaMock(resolve: any, reject: any) {
     // const tokenData = this.tokenService.get();
     // if (!tokenData.token) {
@@ -74,7 +74,7 @@ export class StartupService {
     const user: any = {
       name: 'Admin',
       avatar: './assets/tmp/img/avatar.jpg',
-      email: 'cipchk@qq.com',
+      email: 'admin@nodeunify.com',
       token: '123456789'
     };
     // Application information: including site name, description, year
@@ -86,21 +86,65 @@ export class StartupService {
     // Menu data, https://ng-alain.com/theme/menu
     this.menuService.add([
       {
-        text: 'Main',
+        text: '系统管理',
         group: true,
         children: [
           {
-            text: 'Dashboard',
+            text: '仪表盘',
             link: '/dashboard',
-            icon: { type: 'icon', value: 'appstore' }
+            icon: { type: 'icon', value: 'anticon-dashboard' }
           },
           {
-            text: 'Quick Menu',
-            icon: { type: 'icon', value: 'rocket' },
-            shortcutRoot: true
-          }
+            text: '实时监控',
+            icon: 'anticon-area-chart',
+            children: [
+              {
+                text: '数据接收',
+                link: '/monitor',
+              },
+              {
+                text: '策略报表',
+                link: '/realtime',
+              },
+            ],
+          },
+          {
+            text: '控制中心',
+            icon: 'anticon-deployment-unit',
+            children: [
+              {
+                text: '配置及部署',
+                link: '/monitor',
+              },
+              {
+                text: '策略运行',
+                link: '/realtime',
+              },
+            ],
+          },
         ]
-      }
+      },
+      {
+        text: '更多',
+        group: true,
+        hideInBreadcrumb: true,
+        children: [
+          {
+            text: '账户管理',
+            icon: 'anticon-team',
+            children: [
+              {
+                text: '用户列表',
+                link: '/account/center/user-list',
+              },
+              {
+                text: '权限控制',
+                link: '/account/center/acess-control',
+              },
+            ],
+          },
+        ],
+      },
     ]);
     // Can be set page suffix title, https://ng-alain.com/theme/title
     this.titleService.suffix = app.name;
